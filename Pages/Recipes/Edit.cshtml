@@ -5,45 +5,47 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Recipe</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="pageTitle">
+    <h2>Edit Recipe</h2>
+</div>
+<div class="whiteBox">
+    <hr />
+    <div class="innerBox">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Recipe.ID" />
             <div class="form-group">
-                <label asp-for="Recipe.Name" class="control-label"></label>
+                <h5>Recipe Name:</h5>
                 <input asp-for="Recipe.Name" class="form-control" />
                 <span asp-validation-for="Recipe.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Recipe.CreationDate" class="control-label"></label>
+                <h5>Creation Date:</h5>
                 <input asp-for="Recipe.CreationDate" class="form-control" />
                 <span asp-validation-for="Recipe.CreationDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Recipe.Meal" class="control-label"></label>
+                <h5>Meal:</h5>
                 <input asp-for="Recipe.Meal" class="form-control" />
                 <span asp-validation-for="Recipe.Meal" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Recipe.Information" class="control-label"></label>
+                <h5>Information:</h5>
                 <input asp-for="Recipe.Information" class="form-control" />
                 <span asp-validation-for="Recipe.Information" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="button" id="createButton" />
             </div>
         </form>
     </div>
+    <p>
+        <a class="button" asp-area="" asp-page="/Ingredients/Index" id="tableButton">Edit Ingredients</a>
+        <a class="button" asp-area="" asp-page="./Index" id="tableButton">Back to List</a>
+    </p>
 </div>
+<p></p>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

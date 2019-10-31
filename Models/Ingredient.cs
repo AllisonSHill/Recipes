@@ -12,6 +12,7 @@ namespace RazorPagesRecipe.Models
         public string Name { get; set; }
         public string Amount { get; set; }
         public string Instructions { get; set; }
+        public string recipeName { get; set; }
         [Required]
         public int RecipeID { get; set; }
         public virtual Recipe Recipe { get; set; }

@@ -5,36 +5,33 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Ingredient</h4>
+<div class="pageTitle">
+    <h2>Delete Ingredient</h2>
+</div>
+<div class="whiteBox">
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Ingredient.Name)
-        </dt>
-        <dd class="col-sm-10">
+    <div class="innerBox">
+        <h5>Ingredient Name:</h5>
+        <p>
             @Html.DisplayFor(model => model.Ingredient.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Ingredient.Amount)
-        </dt>
-        <dd class="col-sm-10">
+        </p>
+        <h5>Amount per Serving:</h5>
+        <p>
             @Html.DisplayFor(model => model.Ingredient.Amount)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Ingredient.Instructions)
-        </dt>
-        <dd class="col-sm-10">
+        </p>
+        <h5>Prep Instructions:</h5>
+        <p>
             @Html.DisplayFor(model => model.Ingredient.Instructions)
-        </dd>
-    </dl>
-    
+        </p>
+        <h5>Meal:</h5>
+        <p>
+            @Html.DisplayFor(model => model.Ingredient.recipeName)
+        </p>
+    </div>
+    <p>Are you sure you with to delete this ingredient?</p>
     <form method="post">
         <input type="hidden" asp-for="Ingredient.ID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
+        <input type="submit" value="Yes, Delete" class="button" id="deleteButton" />
+        <a class="button" asp-page="./Index" id="tableButton">No, Back to List</a>
     </form>
 </div>

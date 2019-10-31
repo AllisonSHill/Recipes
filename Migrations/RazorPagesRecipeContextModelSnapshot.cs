@@ -38,6 +38,9 @@ namespace RazorPagesRecipe.Migrations
                     b.Property<int>("RecipeID")
                         .HasColumnType("int");
 
+                    b.Property<string>("recipeName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ID");
 
                     b.HasIndex("RecipeID");

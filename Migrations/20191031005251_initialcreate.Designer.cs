@@ -10,7 +10,7 @@ using RazorPagesRecipe.Data;
 namespace RazorPagesRecipe.Migrations
 {
     [DbContext(typeof(RazorPagesRecipeContext))]
-    [Migration("20191028221739_initialcreate")]
+    [Migration("20191031005251_initialcreate")]
     partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,6 +39,9 @@ namespace RazorPagesRecipe.Migrations
 
                     b.Property<int>("RecipeID")
                         .HasColumnType("int");
+
+                    b.Property<string>("recipeName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 

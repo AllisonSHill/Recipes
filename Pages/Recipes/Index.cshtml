@@ -1,17 +1,27 @@
-﻿@page
+﻿@page 
 @model RazorPagesRecipe.Pages.Recipes.IndexModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+    <div class="pageTitle">
+        <h2>All Recipes</h2>
+    </div>
+    <div class="whiteBox">
+        <a class="button" asp-area="" asp-page="/Recipes/Create" id="createButton">Create New</a>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
+        <form class="searchForm">
+                Meal:&nbsp;&nbsp;<select asp-for="SelectedMeal" asp-items="Model.Meals">
+                    <option value="">All</option>
+                </select>&nbsp;&nbsp;|&nbsp;
+                Name:&nbsp;&nbsp;<input type="text" asp-for="SearchString" />
+                <input type="submit" value="Filter" class="button" id="tableButton" />
+        </form>
+    </div>
+
+<table class="table table-striped" id="ingredientTable">
+    <thead class="tableHeader">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Recipe[0].Name)
@@ -25,7 +35,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Recipe[0].Information)
             </th>
-            <th></th>
+            <th style="width: 25%"></th>
         </tr>
     </thead>
     <tbody>
@@ -44,9 +54,9 @@
                 @Html.DisplayFor(modelItem => item.Information)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a class="button" asp-area="" asp-page="./Edit" asp-route-id="@item.ID" id="tableButton">Edit</a>
+                <a class="button" asp-area="" asp-page="./Details" asp-route-id="@item.ID" id="tableButton">Details</a>
+                <a class="button" asp-area="" asp-page="./Delete" asp-route-id="@item.ID" id="tableButton">Delete</a>
             </td>
         </tr>
 }

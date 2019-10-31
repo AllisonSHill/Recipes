@@ -32,6 +32,7 @@ namespace RazorPagesRecipe.Migrations
                     Name = table.Column<string>(nullable: true),
                     Amount = table.Column<string>(nullable: true),
                     Instructions = table.Column<string>(nullable: true),
+                    recipeName = table.Column<string>(nullable: true),
                     RecipeID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

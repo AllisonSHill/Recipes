@@ -50,6 +50,7 @@ namespace RazorPagesRecipe.Pages.Ingredients
             {
                 var specificRecipe = _context.Recipe.Find(RecipeID);
                 Ingredient.Recipe = specificRecipe;
+                Ingredient.recipeName = specificRecipe.Name;
                 _context.Ingredient.Add(Ingredient);
                 await _context.SaveChangesAsync();
             }
