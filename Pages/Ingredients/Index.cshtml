@@ -12,8 +12,11 @@
     <a class="button" asp-area="" asp-page="Create" id="createButton">Create New</a>
 
     <form class="searchForm">
-            Name:&nbsp;&nbsp;<input type="text" asp-for="SearchString" />
-            <input type="submit" value="Filter" class="button" id="tableButton" />
+        Recipe:&nbsp;&nbsp;<select asp-for="SelectedRecipe" asp-items="Model.RecipeNames">
+            <option value="">All</option>
+        </select>&nbsp;&nbsp;|&nbsp;
+        Name:&nbsp;&nbsp;<input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" class="button" id="tableButton" />
     </form>
 </div>
 
