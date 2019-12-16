@@ -9,30 +9,30 @@
 </head>
     
 <body>
-<div id="navbar" class="sideNav">
-    <img src="~/images/chef.png" class="chefImage" />
-    <ul class="sideNavList">
-        <li class="navHeader">
-            <a class="" asp-area="" asp-page="/Index">Home</a>
-        </li>
-        <li class="navHeader">
-            <a class="" asp-area="" asp-page="/Recipes/Index">Recipes</a>
-        </li>
-    </ul>
-</div>
-<div class="contentWrapper">
-    <div class="container body-content">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div id="navbar" class="sideNav">
+        <img src="~/images/chef.png" class="chefImage" />
+        <ul class="sideNavList">
+            <li class="navHeader">
+                <a class="" asp-area="" asp-page="/Index">Home</a>
+            </li>
+            <li class="navHeader">
+                <a class="" asp-area="" asp-page="/Recipes/Index">Recipes</a>
+            </li>
+        </ul>
     </div>
-
-    <footer class="footer text-muted">
-        <div class="container">
-            &copy; 2019 - Recipe Database - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <div class="contentWrapper">
+        <div class="container body-content">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
-</div>
+
+        <footer class="footer text-muted">
+            <div class="container">
+                &copy; 2019 - Recipe Database - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -48,6 +48,24 @@
                 </tr>
             }
         </table>
+        <table class="table table-striped" id="mobileTable">
+            <thead class="tableHeader">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Information
+                    </th>
+                </tr>
+            </thead>
+            @foreach (var ingredient in Model.Recipe.Ingredients)
+            {
+                <tr>
+                    @await Html.PartialAsync("../Ingredients/_mobileViewIngredients", ingredient)
+                </tr>
+            }
+        </table>
         <a class="button" asp-area="" asp-page="../Ingredients/Create" id="smallCreateButton">Add Ingredients</a>
         <a class="button" asp-area="" asp-page="./Edit" asp-route-id="@Model.Recipe.ID" id="tableButton">Edit</a>
         <a class="button" asp-area="" asp-page="./Index" id="tableButton">Back to List</a>

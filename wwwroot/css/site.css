@@ -306,6 +306,10 @@ textarea {
     margin-bottom: 10px;
 }
 
+#mobileTable {
+    display: none;
+}
+
 th a {
     color: rgb(0,100,100);
 }
@@ -332,33 +336,16 @@ td a {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    h3 {
-        color: white;
-        text-shadow: 2px 2px 4px #000;
-        padding-bottom: 20px;
-    }
-
-    h4 {
-        font-size: 2em;
-    }
-
-    h6 {
+    h5 {
         font-size: 1.2em;
-        font-weight: bold;
     }
 
     body {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        background-size: 30%;
+        font-size: .8em;
     }
 
     .contentWrapper {
-        margin-left: 95px;
+        margin-left: 5px;
         margin-right: 5px;
     }
     /* Set padding to keep content from hitting the edges */
@@ -368,112 +355,56 @@ td a {
     }
 
     #navbar {
-        width: 70px;
         display: none;
-        position: relative;
-    }
-
-    .navHeader {
-        font-size: 1.1em;
-        margin-left: -25px;
-        margin-top: 10px;
-    }
-
-    .chefImage {
-        width: 90px;
-    }
-
-    .pageTitle {
-        text-align: center;
-        min-height: 55px;
-        padding-top: 10px;
     }
 
     .homeSubTitle {
-        padding: 25px;
+        padding: 10px;
     }
 
     #homeButton {
-        margin-left: 50px;
-        margin-right: 50px;
-        font-size: 1.1em;
-        font-weight: bold;
-        padding: 6px 24px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 6px;
     }
 
     #createButton {
-        font-size: 1.1em;
+        font-size: 1em;
         font-weight: bold;
-        padding: 6px 24px;
+        padding: 6px 10px;
+        display: block;
+        width: 95px;
     }
 
     #tableButton {
-        font-size: .9em;
-        font-weight: bold;
-        padding: 3px 15px;
+        /*font-size: 1em;*/
+        font-weight: normal;
+        padding: 3px 8px;
+        margin-bottom: 3px;
     }
 
-    #smallCreateButton {
-        font-size: .9em;
-        font-weight: bold;
-        padding: 3px 15px;
-    }
-
-    #deleteButton {
-        font-size: .9em;
-        font-weight: bold;
-        padding: 6px 24px;
-    }
-
-    .button {
-        display: inline-block;
-    }
-
-    .whiteBox {
-        padding: 20px;
-    }
-
-    .innerBox {
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    #recipeDetailsBox {
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 10px;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-    }
-
-    #ingredientDetailsBox {
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 10px;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-    }
-
-    #createPage {
-        padding-left: 60px;
+    #headerWhiteBox {
+        padding-bottom: 50px;
     }
 
     .searchForm {
-        display: inline-block;
-        margin-right: 0px;
-        float: right;
+        float: left;
         margin-top: 10px;
+        /*margin-bottom: 30px;*/
+        display: block;
     }
 
-    #recipeIndexCreate {
+    #SearchString {
+        width: 11vh;
+    }
+
+    /*#recipeIndexCreate {
         display: inline-block;
     }
 
     .recipeInfo {
         padding: 20px;
-    }
+    }*/
 
     /*.dropdown {
         display: block;
@@ -517,37 +448,15 @@ td a {
         }*/
 
     .table {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     #ingredientTable {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        display: none;
     }
 
-    .jumbotron {
-        height: 275px;
-        padding-top: 100px;
+    #mobileTable {
+        display: block;
     }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    ...
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    ...
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    ...
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    ...
 }

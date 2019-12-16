@@ -8,7 +8,7 @@
 <div class="pageTitle">
     <h2>Ingredients Index</h2>
 </div>
-<div class="whiteBox">
+<div class="whiteBox" id="headerWhiteBox">
     <a class="button" asp-area="" asp-page="Create" id="createButton">Create New</a>
 
     <form class="searchForm">
@@ -60,5 +60,40 @@
         </tr>
 
 }
+    </tbody>
+</table>
+
+
+<table class="table table-striped" id="mobileTable">
+    <thead class="tableHeader">
+        <tr>
+            <th>
+                Ingredient:
+            </th>
+            <th>
+                Prep Instructions:
+            </th>
+            <th style="width: 25%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Ingredient)
+        {
+            <tr>
+                <td>
+                    <b>Name:</b> @Html.DisplayFor(modelItem => item.Name)<br />
+                    <b>Amount/Serving:</b> @Html.DisplayFor(modelItem => item.Amount)<br />
+                    <b>Recipe Name:</b> @Html.DisplayFor(modelItem => item.recipeName)
+                </td>
+                <td>
+                    <b>Instructions: </b> @Html.DisplayFor(modelItem => item.Instructions)
+                </td>
+                <td>
+                    <a class="button" asp-page="./Edit" asp-route-id="@item.ID" id="tableButton">Edit</a>
+                    <a class="button" asp-page="./Delete" asp-route-id="@item.ID" id="tableButton">Delete</a>
+                </td>
+            </tr>
+
+        }
     </tbody>
 </table>

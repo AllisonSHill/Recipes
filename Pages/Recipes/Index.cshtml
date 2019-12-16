@@ -8,7 +8,7 @@
     <div class="pageTitle">
         <h2>All Recipes</h2>
     </div>
-    <div class="whiteBox">
+    <div class="whiteBox" id="headerWhiteBox">
         <a class="button" asp-area="" asp-page="/Recipes/Create" id="createButton">Create New</a>
 
         <form class="searchForm">
@@ -27,7 +27,7 @@
                 @Html.DisplayNameFor(model => model.Recipe[0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Recipe[0].CreationDate)
+                Date Created
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Recipe[0].Meal)
@@ -62,3 +62,35 @@
 }
     </tbody>
 </table>
+
+<table class="table table-striped" id="mobileTable">
+    <thead class="tableHeader">
+        <tr>
+            <th>
+                Recipe Information:
+            </th>
+            <th width="25%">
+                Options:
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Recipe)
+        {
+        <tr>
+            <td>
+                <b>Name:</b> @Html.DisplayFor(modelItem => item.Name) <br />
+                <b>Date Created:</b> @Html.DisplayFor(modelItem => item.CreationDate)<br />
+                <b>Meal:</b> @Html.DisplayFor(modelItem => item.Meal)<br />
+                <b>Information:</b> @Html.DisplayFor(modelItem => item.Information)
+            </td>
+
+            <td>
+                <a class="button" asp-area="" asp-page="./Edit" asp-route-id="@item.ID" id="tableButton">Edit</a>
+                <a class="button" asp-area="" asp-page="./Details" asp-route-id="@item.ID" id="tableButton">Details</a>
+                <a class="button" asp-area="" asp-page="./Delete" asp-route-id="@item.ID" id="tableButton">Delete</a>
+            </td>
+        </tr>
+    }
+        </tbody>
+    </table>

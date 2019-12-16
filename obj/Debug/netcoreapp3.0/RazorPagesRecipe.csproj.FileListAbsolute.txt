@@ -135,3 +135,4 @@ C:\Users\Allison\Documents\GitHub\RazorPagesRecipe\obj\Debug\netcoreapp3.0\Razor
 C:\Users\Allison\Documents\GitHub\RazorPagesRecipe\obj\Debug\netcoreapp3.0\RazorPagesRecipe.csprojAssemblyReference.cache
 C:\Users\Allison\Documents\GitHub\RazorPagesRecipe\obj\Debug\netcoreapp3.0\Razor\Pages\Ingredients\_viewIngredients.cshtml.g.cs
 C:\Users\Allison\Documents\GitHub\RazorPagesRecipe\obj\Debug\netcoreapp3.0\Razor\Pages\Ingredients\Details.cshtml.g.cs
+C:\Users\Allison\Documents\GitHub\RazorPagesRecipe\obj\Debug\netcoreapp3.0\Razor\Pages\Ingredients\_mobileViewIngredients.cshtml.g.cs

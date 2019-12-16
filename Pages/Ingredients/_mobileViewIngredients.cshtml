@@ -1,0 +1,10 @@
+﻿@page
+@model RazorPagesRecipe.Models.Ingredient
+
+<td>
+    @Html.DisplayFor(model => model.Name)
+</td>
+<td>
+    <b>Amount/Serving:</b> @Html.DisplayFor(model => model.Amount)<br />
+    <b>Instructions:</b> @Html.DisplayFor(model => model.Instructions)
+</td>
